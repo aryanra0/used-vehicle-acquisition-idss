@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Environment / secrets
+.env
+*.local
+
+# Large data files (tracked via data/README.md provenance instead)
+data/raw/*.csv
+data/raw/*.xls
+data/raw/*.xlsx
+data/processed/
+data/interim/
+
+# Trained model artifacts
+models/*
+!models/.gitkeep
+
+# Logs and prediction records
+logs/
+*.log
+prediction_log.*
+
+# Test / tooling caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# AI/editor tooling artifacts (not project code)
+.kiro/
+# Gemini-generated helper scripts (not project code)
+gemini-code-1784590024986.sh
+gemini-code-1784590027962.sh

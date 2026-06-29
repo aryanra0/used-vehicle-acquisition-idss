@@ -1,0 +1,21 @@
+# Core data / numerics
+pandas>=2.0
+numpy>=1.24
+
+# Reading the legacy .xls days-to-turn benchmark
+xlrd>=2.0
+
+# Modeling (scikit-learn's HistGradientBoosting needs no extra system libraries)
+scikit-learn>=1.5
+joblib>=1.3
+
+# Optional: drop-in gradient boosting alternatives (not required)
+# xgboost>=2.0
+# lightgbm>=4.0
+
+# API backend (serves the models to the Next.js dashboard)
+fastapi>=0.110
+uvicorn>=0.29
+
+# Testing
+pytest>=7.4
