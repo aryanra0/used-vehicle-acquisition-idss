@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", system-ui, sans-serif;
+}
+
+html,
+body {
+  color: #0f172a; /* slate-900 */
+  background: #f8fafc; /* slate-50 */
+}
+
+/* Soft, subtle app background gradient (light) */
+.app-bg {
+  background:
+    radial-gradient(1100px 560px at 82% -12%, #e0e7ff 0%, transparent 55%),
+    radial-gradient(820px 460px at -8% -6%, #eef2ff 0%, transparent 52%),
+    linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  background-attachment: fixed;
+}
+
+/* Card surface */
+.card {
+  @apply rounded-2xl border border-slate-200 bg-white/90 shadow-card backdrop-blur-sm;
+}
+
+.card-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+}
+
+/* Gradient headline text */
+.text-gradient {
+  background: linear-gradient(90deg, #4338ca 0%, #6366f1 60%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Thin gradient top-accent used on hero cards */
+.accent-top {
+  position: relative;
+  overflow: hidden;
+}
+.accent-top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, #4f46e5, #6366f1, #0ea5e9);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Landing page surfaces */
+
+/* Full-page background for the landing route. */
+.landing-bg {
+  background:
+    radial-gradient(1200px 720px at 88% -10%, rgba(99, 102, 241, 0.16) 0%, transparent 58%),
+    radial-gradient(1000px 640px at 8% -6%, rgba(14, 165, 233, 0.14) 0%, transparent 55%),
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 42%, #f1f5f9 100%);
+}
+
+/* Gradient mesh across the upper third of the hero: layered soft radial blobs. */
+.hero-mesh {
+  background:
+    radial-gradient(680px 420px at 12% 8%, rgba(129, 140, 248, 0.38) 0%, transparent 60%),
+    radial-gradient(720px 460px at 82% 0%, rgba(14, 165, 233, 0.30) 0%, transparent 62%),
+    radial-gradient(560px 420px at 62% 30%, rgba(236, 72, 153, 0.16) 0%, transparent 60%),
+    radial-gradient(600px 480px at 30% 42%, rgba(79, 70, 229, 0.22) 0%, transparent 64%),
+    radial-gradient(900px 520px at 95% 48%, rgba(245, 158, 11, 0.10) 0%, transparent 60%);
+  filter: blur(6px);
+}
+
+/* Faint dotted grid behind the hero content. */
+.hero-grid {
+  background-image: radial-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+  background-size: 22px 22px;
+  -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 30%, transparent 75%);
+}
+
+/* Tabular figures for money and metric numerals. */
+.tnum {
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* Frosted top navigation bar. */
+.nav-blur {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
+}
