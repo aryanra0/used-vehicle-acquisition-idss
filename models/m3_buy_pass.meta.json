@@ -1,0 +1,23 @@
+{
+  "metrics": {
+    "threshold": 0.46800182114188055,
+    "accuracy": 0.824443665996792,
+    "f1": 0.8920542789448028,
+    "f1_at_0.5": 0.8913535147638979,
+    "trivial_f1_baseline": 0.8684531694952382,
+    "roc_auc": 0.8441134367062628,
+    "auc_pr": 0.9394463142283869,
+    "brier": 0.12357101537247299,
+    "positive_rate": 0.7674920260329283
+  },
+  "acquisition_discount": 0.2,
+  "target_margin": 0.15,
+  "threshold": 0.46800182114188055,
+  "source": "car_prices",
+  "rows_train": 368825,
+  "rows_val": 65087,
+  "rows_test": 108478,
+  "name": "m3_buy_pass",
+  "artifact": "m3_buy_pass.joblib",
+  "saved_at": "2026-07-20T19:27:57.189924+00:00"
+}

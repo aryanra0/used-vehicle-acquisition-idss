@@ -1,0 +1,10 @@
+{
+  "proxy": false,
+  "source": "car_prices",
+  "rows_train": 368825,
+  "rows_val": 65087,
+  "rows_test": 108478,
+  "name": "mmr_lookup",
+  "artifact": "mmr_lookup.joblib",
+  "saved_at": "2026-07-20T19:27:57.193903+00:00"
+}

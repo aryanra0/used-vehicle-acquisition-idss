@@ -143,7 +143,7 @@ All features are available at prediction time and knowable before acquisition (n
 - Raw: year, make, model, body, transmission, state, color, mileage, condition.
 - Real MMR: `market_value`, the vehicle's real Manheim MMR benchmark (an external, pre-sale value, not the sale price, so no leakage). The strongest single feature.
 - Engineered: vehicle age (reference year 2016 minus model year) and mileage-per-year.
-- Days-to-sell join: average days-to-sell by make from the Edmunds benchmark, used to derive the M2 band label.
+- Days-to-sell join: average days-to-sell by make from the days-to-turn benchmark, used to derive the M2 band label.
 - Adjustable parameters (user, not learned): target profit margin, acquisition discount, risk tolerance, holding cost, holding period, repair estimate.
 - The sale `price` is the only leakage-excluded column. `condition` may be missing and is left NaN (the tree models handle it natively).
 
@@ -208,12 +208,12 @@ three-source blend) keeps model naming consistent, provides a real MMR benchmark
 and keeps the price basis uniformly wholesale so resale and MMR are comparable.
 
 ### 7.1 Primary source: `car_prices.csv` (wholesale/auction)
-- ~558,000 real US wholesale/auction records; model years ~1990-2015. Public "Vehicle Sales Data" (Kaggle).
+- ~558,000 real US wholesale/auction records; model years ~1990-2015, from a public vehicle wholesale-auction dataset.
 - Fields: year, make, model, trim, body, transmission, vin, state, condition, odometer, color, interior, seller, mmr, sellingprice (the resale target), saledate.
 - Provides real sold prices, the only condition signal, and a real MMR benchmark used both as a feature and as a make/model/year lookup.
 - Cleaning: parse numeric strings; sanity-bound price/mileage/year; sanitize the contaminated `transmission` column; de-duplicate.
 
-### 7.2 Days-to-Sell Benchmark: Edmunds "Days To Turn" (`2016-10-dtt.xls`)
+### 7.2 Days-to-Sell Benchmark: make/segment "Days To Turn" (`2016-10-dtt.xls`)
 - Monthly average days-to-sell by manufacturer/make/segment; used to derive the M2 band. Aggregate, not per-car.
 
 ### 7.3 Preprocessing Pipeline (run before modeling)

@@ -131,8 +131,9 @@ export default function Home() {
 
       <footer className="mt-10 space-y-1 text-center text-xs text-slate-400">
         <p>
-          Decision support only. Estimates value at the wholesale level from 2014-2015 auction
-          data. A human buyer makes the final call.
+          Decision support only. Estimates are wholesale-level and, unless live pricing is
+          enabled, reflect a bundled market snapshot rather than live market conditions. A
+          human buyer makes the final call.
         </p>
         {meta && (
           <p>

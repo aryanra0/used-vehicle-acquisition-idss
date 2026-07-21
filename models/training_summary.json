@@ -1,0 +1,58 @@
+{
+  "M1_resale": {
+    "mae": 956.1946862929974,
+    "mape": 0.11392497731210012,
+    "rmsle": 0.18288214127575853,
+    "r2": 0.9658388438659361,
+    "mmr_baseline_mae": 1091.2406109994654,
+    "beats_mmr_baseline": true,
+    "per_state_mae_top": {
+      "ab": 1462.9564198475853,
+      "pr": 1263.934480131159,
+      "hi": 1250.1193815698482,
+      "ca": 1126.7820769758944,
+      "ut": 1099.974261944959
+    },
+    "interval_0.8": {
+      "coverage": 0.7938752558122384,
+      "avg_width": 2859.911881429177
+    },
+    "confidence_vs_error": {
+      "low_divergence(<5%)": {
+        "n": 67960,
+        "mae": 902.7402498135099
+      },
+      "mid_divergence(5%-15%)": {
+        "n": 25592,
+        "mae": 973.1310304154288
+      },
+      "high_divergence(>=15%)": {
+        "n": 14926,
+        "mae": 1170.5406989129037
+      }
+    }
+  },
+  "M2_dts_band": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "label_is_deterministic_from_make": true,
+    "accuracy_note": "Band = make-level Edmunds benchmark lookup; `make` is a feature, so standard accuracy on seen makes is ~1.0 and not a measure of skill. Use heldout_make_accuracy for generalization to unseen makes.",
+    "heldout_make_available": true,
+    "heldout_make_accuracy": 0.867733552181644,
+    "heldout_make_macro_f1": 0.4645917246429879,
+    "heldout_make_majority_baseline_accuracy": 0.867733552181644,
+    "heldout_make_count": 11,
+    "heldout_make_eval_rows": 7311
+  },
+  "M3_buy_pass": {
+    "threshold": 0.46800182114188055,
+    "accuracy": 0.824443665996792,
+    "f1": 0.8920542789448028,
+    "f1_at_0.5": 0.8913535147638979,
+    "trivial_f1_baseline": 0.8684531694952382,
+    "roc_auc": 0.8441134367062628,
+    "auc_pr": 0.9394463142283869,
+    "brier": 0.12357101537247299,
+    "positive_rate": 0.7674920260329283
+  }
+}

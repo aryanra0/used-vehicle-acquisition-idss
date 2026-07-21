@@ -168,7 +168,7 @@ def main() -> None:
     # perfectly. The generalization-to-unseen-makes number is the meaningful one.
     m2_metrics["label_is_deterministic_from_make"] = True
     m2_metrics["accuracy_note"] = (
-        "Band = make-level Edmunds benchmark lookup; `make` is a feature, so "
+        "Band = make-level days-to-turn benchmark lookup; `make` is a feature, so "
         "standard accuracy on seen makes is ~1.0 and not a measure of skill. "
         "Use heldout_make_accuracy for generalization to unseen makes."
     )

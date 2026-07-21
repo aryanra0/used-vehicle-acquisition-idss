@@ -1,0 +1,21 @@
+{
+  "metrics": {
+    "accuracy": 1.0,
+    "macro_f1": 1.0,
+    "label_is_deterministic_from_make": true,
+    "accuracy_note": "Band = make-level Edmunds benchmark lookup; `make` is a feature, so standard accuracy on seen makes is ~1.0 and not a measure of skill. Use heldout_make_accuracy for generalization to unseen makes.",
+    "heldout_make_available": true,
+    "heldout_make_accuracy": 0.867733552181644,
+    "heldout_make_macro_f1": 0.4645917246429879,
+    "heldout_make_majority_baseline_accuracy": 0.867733552181644,
+    "heldout_make_count": 11,
+    "heldout_make_eval_rows": 7311
+  },
+  "source": "car_prices",
+  "rows_train": 368825,
+  "rows_val": 65087,
+  "rows_test": 108478,
+  "name": "m2_dts_band",
+  "artifact": "m2_dts_band.joblib",
+  "saved_at": "2026-07-20T19:27:57.161047+00:00"
+}

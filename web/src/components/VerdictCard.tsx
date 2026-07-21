@@ -23,7 +23,7 @@ export function VerdictCard({ r }: { r: EvaluationResult }) {
       <div className="mb-4 flex items-center gap-2">
         <Badge tone={live ? "buy" : "slate"}>
           {live ? <Radio size={11} /> : <Database size={11} />}
-          {live ? "Live market price" : "Model estimate · 2014-2015 data"}
+          {live ? "Live market price" : "Model estimate"}
         </Badge>
       </div>
       <div className="flex flex-wrap items-center justify-between gap-4">

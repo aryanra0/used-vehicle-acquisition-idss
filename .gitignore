@@ -24,9 +24,9 @@ data/raw/*.xlsx
 data/processed/
 data/interim/
 
-# Trained model artifacts
-models/*
-!models/.gitkeep
+# Trained model artifacts are committed (only ~5 MB total) so the API and web
+# run out of the box without retraining. Regenerate any time with
+# `python -m idss.train`.
 
 # Logs and prediction records
 logs/

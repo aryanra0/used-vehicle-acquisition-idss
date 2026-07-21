@@ -302,8 +302,8 @@ function Models() {
       icon: Clock,
       title: "Days to sell",
       task: "Classification",
-      body: "Bands the expected time on the lot into Fast, Moderate, Slow, or Very slow, using the make-level Edmunds benchmark.",
-      chips: ["4 bands", "Edmunds Days-To-Turn"],
+      body: "Bands the expected time on the lot into Fast, Moderate, Slow, or Very slow, using a make-level days-to-turn benchmark.",
+      chips: ["4 bands", "Days-To-Turn benchmark"],
     },
     {
       id: "M3",
@@ -511,8 +511,9 @@ function SiteFooter() {
               </span>
             </div>
             <p className="mt-3 text-sm leading-relaxed text-slate-500">
-              Decision support only. Estimates value at the wholesale level from 2014-2015 auction
-              data. A human buyer makes the final call.
+              Decision support only. Estimates are wholesale-level and, unless live pricing is
+              enabled, reflect a bundled market snapshot rather than live market conditions. A
+              human buyer makes the final call.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-10 text-sm">

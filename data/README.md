@@ -1,8 +1,8 @@
 # Data
 
 Provenance and dictionary for the datasets used by the IDSS. The raw data files
-are gitignored because they are large, so this document records what they are and
-where they came from.
+are committed to the repo (under `raw/`) so it runs end to end after a clone;
+this document records what they are and where they came from.
 
 ## Training source (single source)
 
@@ -11,8 +11,8 @@ The models train on one real source, `raw/car_prices.csv`, loaded and cleaned by
 several (see "Why one source" below).
 
 ### `raw/car_prices.csv`: wholesale/auction, with condition and MMR
-- ~558,000 real US wholesale/auction records; model years ~1990-2015. Public
-  "Vehicle Sales Data" (Kaggle).
+- ~558,000 real US wholesale/auction records; model years ~1990-2015, from a
+  public vehicle wholesale-auction dataset.
 - Columns include: year, make, model, trim, body, transmission, vin, state,
   condition, odometer, color, interior, seller, mmr, sellingprice (the resale
   target), saledate.
@@ -20,8 +20,8 @@ several (see "Why one source" below).
   Market Report) wholesale benchmark.
 
 ### Days-to-sell benchmark: `raw/2016-10-dtt.xls`
-- Edmunds "Days To Turn": monthly average days-to-sell by manufacturer/make/segment
-  (Oct 2015 to Oct 2016).
+- A make/segment "days to turn" benchmark: monthly average days-to-sell by
+  manufacturer/make/segment (Oct 2015 to Oct 2016).
 - Joined by make to derive the M2 days-to-sell band (Fast <=60, Moderate 61-90,
   Slow 91-120, Very slow >120; calibrated to the observed ~40-105 day spread,
   median ~71).
@@ -69,10 +69,12 @@ An earlier version blended three sources (`true_car_listings.csv`, `car_prices.c
 Using `car_prices` alone gives consistent naming, a real MMR benchmark, condition
 grades, and one price basis (wholesale) that is directly comparable to MMR.
 
-## Downloading the data
-`raw/car_prices.csv` and `raw/2016-10-dtt.xls` are not committed (they are large and
-gitignored). Download `car_prices.csv` from the Kaggle "Vehicle Sales Data" dataset
-and place both files under `data/raw/` before training.
+## Data source
+`raw/car_prices.csv` and `raw/2016-10-dtt.xls` are committed under `data/raw/`, so
+no separate download is needed. They are a public vehicle wholesale-auction
+dataset and a make-level days-to-turn benchmark, respectively — a bundled market
+snapshot so the repo runs offline. To replace them, place files with the same
+names and schema under `data/raw/`.
 
 ## Rejected sources
 - `car_sales_data.csv` and duplicates: synthetic, with randomly paired make/model

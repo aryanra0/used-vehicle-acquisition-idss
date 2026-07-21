@@ -1,4 +1,4 @@
-"""Days-to-Sell benchmark from the Edmunds "Days To Turn" report.
+"""Days-to-Sell benchmark from a make-level "Days To Turn" report.
 
 Parses 2016-10-dtt.xls into a make -> average-days lookup and maps each make to
 a sale-time band (Fast / Moderate / Slow / Very slow). This is a make-level
@@ -52,7 +52,7 @@ class DtsBenchmark:
 
 
 def load_benchmark(path: Optional[Path] = None) -> DtsBenchmark:
-    """Parse the Edmunds DTT .xls into a DtsBenchmark."""
+    """Parse the "Days To Turn" .xls into a DtsBenchmark."""
     path = Path(path) if path else config.DTT_BENCHMARK_XLS
     if not path.exists():
         raise FileNotFoundError(f"DTT benchmark not found at {path}")

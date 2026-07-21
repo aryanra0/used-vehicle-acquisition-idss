@@ -1,0 +1,42 @@
+{
+  "metrics": {
+    "mae": 956.1946862929974,
+    "mape": 0.11392497731210012,
+    "rmsle": 0.18288214127575853,
+    "r2": 0.9658388438659361,
+    "mmr_baseline_mae": 1091.2406109994654,
+    "beats_mmr_baseline": true,
+    "per_state_mae_top": {
+      "ab": 1462.9564198475853,
+      "pr": 1263.934480131159,
+      "hi": 1250.1193815698482,
+      "ca": 1126.7820769758944,
+      "ut": 1099.974261944959
+    },
+    "interval_0.8": {
+      "coverage": 0.7938752558122384,
+      "avg_width": 2859.911881429177
+    },
+    "confidence_vs_error": {
+      "low_divergence(<5%)": {
+        "n": 67960,
+        "mae": 902.7402498135099
+      },
+      "mid_divergence(5%-15%)": {
+        "n": 25592,
+        "mae": 973.1310304154288
+      },
+      "high_divergence(>=15%)": {
+        "n": 14926,
+        "mae": 1170.5406989129037
+      }
+    }
+  },
+  "source": "car_prices",
+  "rows_train": 368825,
+  "rows_val": 65087,
+  "rows_test": 108478,
+  "name": "m1_resale",
+  "artifact": "m1_resale.joblib",
+  "saved_at": "2026-07-20T19:27:57.131043+00:00"
+}
