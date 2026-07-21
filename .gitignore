@@ -14,10 +14,13 @@ env/
 .env
 *.local
 
-# Large data files (tracked via data/README.md provenance instead)
+# Large data files. The two real source inputs are committed so the repo runs
+# out of the box; other raw dumps and the regenerated processed splits stay out.
 data/raw/*.csv
 data/raw/*.xls
 data/raw/*.xlsx
+!data/raw/car_prices.csv
+!data/raw/2016-10-dtt.xls
 data/processed/
 data/interim/
 
